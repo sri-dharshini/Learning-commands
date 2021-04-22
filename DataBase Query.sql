@@ -16,6 +16,14 @@ Prod_Description varchar(Max),
 Prod_Quantity int,
 Prod_Status varchar(30),
 Retail_Id int FOREIGN KEY REFERENCES Retailers(Retail_Id))
+					
+					       
+					       
+create table Wishlist(
+Wishlist_Id int identity(101,1) primary key,
+User_Id int references Users(User_Id),
+Prod_Id int references Products(Prod_Id)
+)					       
 
 
  
