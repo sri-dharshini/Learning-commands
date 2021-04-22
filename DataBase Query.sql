@@ -55,11 +55,7 @@ User_Country varchar(30)
 	
 )
 
-create table Wishlist(
-Wishlist_Id int identity(101,1) primary key,
-User_Id int references Users(User_Id),
-Prod_Id int references Products(Prod_Id)
-)
+
 
 create table Cart(
 Cart_Id int identity(1,1) primary key,
