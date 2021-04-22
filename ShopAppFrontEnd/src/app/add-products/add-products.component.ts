@@ -77,6 +77,22 @@ msg:string;
     }
     reader.readAsDataURL(this.fileToUpload);
   }
+ processResults()
+    {
+      console.log(this.category);
+      this.catlist=this.category;
+      console.log(this.catlist);
+
+    }
+    handleFileInput(file: FileList) {
+      this.fileToUpload = file.item(0);
+      let reader = new FileReader();
+    reader.onload = (event: any) => {
+      this.imageUrl = event.target.result;
+      console.log(this.imageUrl);
+    }
+    reader.readAsDataURL(this.fileToUpload);
+  }
 
 
   ngOnInit(): void {
